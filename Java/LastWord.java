@@ -19,16 +19,25 @@ public class LastWord {
 
     static public int lengthOfLastWord(String s) {
         int count = 0;
-        if(s == null || s.isEmpty() || s == " "){
+        if(s == null || s.isEmpty() || s.equals(" ")){
             return 0;
         }else{
             int i = 1;
             boolean band = true;
             int size = s.length();
-            while(band){
-                if(size == i){
-                    band = false;
-                }else{
+            if(size == 1){
+                count++;
+            }else{
+                while(s.charAt(size-i) == ' '){
+                    if(size == i){
+                        return 0;
+                    }
+                    i++;
+                }
+                while(band){
+                    if(size == i){
+                        band = false;
+                    }
                     if(s.charAt(size-i) != ' '){
                         count++;
                     }else{
