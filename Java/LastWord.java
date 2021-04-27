@@ -26,7 +26,7 @@ public class LastWord {
             boolean band = true;
             int size = s.length();
             if(size == 1){
-                count++;
+                return 1;
             }else{
                 while(s.charAt(size-i) == ' '){
                     if(size == i){
