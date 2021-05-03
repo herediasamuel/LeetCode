@@ -32,4 +32,9 @@ public class MajorityElement {
         }
         return result;
     }
+    //Another more efficient way
+    static public int majorityElementTwo(int[] nums) {
+       Arrays.sort(nums);
+       return nums[nums.length/2];
+    }
 }
